@@ -1,0 +1,11 @@
+header {
+  height: 10vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
+  align-items: center;
+  position: sticky;
+  background-color: black;
+}
+/*# sourceMappingURL=header.css.map */

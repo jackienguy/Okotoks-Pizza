@@ -6,65 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Okotoks Pizza</title>
 </head>
 <body>
     <header>
         <div>
-            <img id="site-logo" src="photos/okotoks_pizza_logo.png" alt="Okotoks Pizza Logo">
+            <img id="site-logo" src="photos/opplogo.png" alt="Okotoks Pizza Logo">
         </div>
-        <div>
-            <a href="#">Home</a>
-        </div>
-        <div>
+        <input type="checkbox" name="menu-toggle" id="menu-toggle">
+        <label for="menu-toggle">Menu</label>
+        <di id="menu">
+            <a href="#">Home</>
             <a target="_blank" href="">About Us</a> 
-         </div>
-        <div>
-             <a target="_blank" href="">Menu</a> 
-        </div>
-        <div>
-            <a target="_blank" href="">Reservation</a> 
-        </div>
-        <div>
-            <a href="mailto:info@okotokspizza.ca">Email Us</a> 
-        </div>
-        <div>
-            <a href="tel:(403) 555-5555">Phone</a> 
+            <a target="_blank" href="">Menu</a> 
+            <a target="_blank" href="">Reservation</a>   
         </div>
     </header>
 
-    <section id="hero-carousel"> </section>
+    <main id="container">
+        <section id="hero"> 
+            
+        </section>
 
-    <section id="quick-menu">
-        <a href="">Pizzas</a>
-        <a href=""> Calzones</a>
-        <a href="">Pastas</a>
-        <a href="">Beverages</a>
-    </section>
+        <section id="quick-menu">
+            <a href="">Pizzas</a>
+            <a href=""> Calzones</a>
+            <a href="">Pastas</a>
+            <a href="">Beverages</a>
+        </section>
 
-    <section id="main-aboutUs">
-        <h2>About Us</h2>
-        <p></p>
-        <a href="">View More</a>
-    </section>
+        <section id="main-aboutUs">
+            <h2 class="main-heading">About Us</h2>
+            <article>
+                <p>There are no shortcuts when it comes to our passion. We pull out all the stops, giving you the ‘wow’ flavour, experience and consistency you not only want, but deserve. Our customers keep coming back, again, again, and again</p>
+            </article>
+            <a href="">View More</a>
+        </section>
 
-    <section id="featured-items">
-        <h2>Featured Items</h2>
-        <li>
-            <ul>Pepperoni</ul>
-            <ul>Margherita</ul>
-            <ul>Penne Alla Boscaiola</ul>
-        </li>
-        <div id="food-carousel">
+        <section id="featured-items">
+            <h2 class="main-heading">Featured Items</h2>
+            <li>
+                <ul>Pepperoni</ul>
+                <ul>Margherita</ul>
+                <ul>Penne Alla Boscaiola</ul>
+            </li>
+            <div id="food-carousel">
 
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section id="location">
-        <a href=""></a>
-        <h2>Location</h2>
-        <p>Address</p>
-    </section>
+        <section id="location">
+            <h2 class="main-heading">Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80817.26201972517!2d-114.03636043698224!3d50.72848306489721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa224df5fbe194cd0!2sokotoks%20donair%20and%20pizza!5e0!3m2!1sen!2sca!4v1624578842547!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h3>Address</h3>
+            <p>123 Fake Street, Okotoks, AB T1T 1T1</p>
+        </section>
+    </main>
 </body>
 
 <footer>
@@ -74,9 +78,9 @@
         <p>Fri - Sat: 11am to 2am</p>
     </div>
     <div>
-        <h3>Contact Us</h3>
-        <p>Ph:(403) 555-5555</p>
-        <p>Email:info@okotokspizza.ca</p>
+        <h3>Contact Us</h3> 
+        <a href="mailto:info@okotokspizza.ca">Email Us</a> 
+        <a href="tel:(403) 555-5555">Phone</a> 
     </div>
     <div>
         <h3>Follow Us</h3>

@@ -1,0 +1,15 @@
+$website-font-fam:'Poppins', sans-serif;
+$logo-size: 75px;
+$header-height: 10vh;
+
+header {
+    height: $header-height;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
+    align-items: center;
+    position: sticky;
+    background-color: black;
+}
+

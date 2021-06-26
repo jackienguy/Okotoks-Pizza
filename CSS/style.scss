@@ -1,142 +1,114 @@
 @import '_variables.scss';
 
-* {
+* { 
     padding: 0;
     margin: 0;
 }
 
-// Generic Styles
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    background-color: $bkg-color;
+    height: 100vh;
+    font-family: $website-font-fam;
+    background: #f2e9e4;
 }
 
+// navbar style
 @import 'header.scss';
 
-#container {
+header {
+    background-color: $nav-bkg-color;
+    height: $header-height;
+    width: 100%;
     display: grid;
-    height: 100%;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    grid-template-rows: repeat(auto-fit, 2fr);
-    justify-items: center;
+    grid-template-columns: $grid-temp-col;
+   justify-items: center;
+   align-items: center;
+   position: sticky;
+   top: 0px;
 }
 
 #site-logo {
-    width: $header-height;
-    padding: 2px 3px;
-}
-#menu {
-    display: none;
-    position: fixed;
-    height: 80vh;
-    background: rgb(172, 90, 90);
+    width: $site-logo-width;
+    top: 0px;
+    margin-right: auto; 
+    // Auto used to push logo to the very left on mobile
 }
 
-#menu-toggle:checked ~ div {
-    display: block;
+#menu-toggle-label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: $link-color;
+    padding: 25px 20px 0px 20px;
+    font-size: 1.5rem;
 }
 
 #menu-toggle {
     display: none;
 }
 
-label {
-    color: white;
+#closes {
+    display: none;
 }
 
-#menu a {
-    color: white;
-    text-decoration: none;
-    list-style-type: none;
-    padding: 6px 12px;
-    border-radius: 2px;
+#nav-menu ul {
+    // Display inline-flex used to expand the <li> litems in inline direction
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav-menu ul li {
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 1.1rem;
+    display: none;
+    // nav menu items are set to display to none so it is not visible unless checkbox is clicked
+}
+
+#menu-toggle:checked ~ #nav-menu li {
     display: block;
+    top: 100px;
+
 }
 
-a:hover {
-    background-color: rgb(87, 85, 85);
+#nav-menu ul li a {
+    text-decoration: none;
+    color: $link-color;
 }
 
-// Style for Home Page
-#quick-menu {
-    background-color: white;
-    border-radius: 3px;
-    border: 1px solid rgb(201, 195, 195);
-    width: 60vw;
-    margin-left: 18vw ;
-    padding: 1vh 5vw;
+#phone a {
+    display: none;
 }
 
-footer {
-    height: 20vh;
-    background-color: black;
-}
-
-footer > div h3, p, a {
-    color: white;
-}
-
-
-  
-// Mobile Screen
-@media only screen and (max-width: 400px) {
-
-    // Style for Home Page
-    #quick-menu {
+// Desktop Style
+@media only screen and (min-width: 768px) {
+    #menu-toggle-label {
         display: none;
+        // display set to none to hide toggle menu on desktop screen
     }
 
-    
-    .main-heading {
+    #nav-menu ul {
+        flex-direction: row;
+    }
+
+    #nav-menu ul li {
         display: block;
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    #container {
-        height: 100vh;
-        width: 100%;
-        margin: 5% 0;
-    }
-
-    #main-aboutUs {
-        grid-row: 1/2;
-    }
-
-    #main-aboutUs > article > p {
-        text-align: center;
-        padding: 10px;
         font-size: 1.1rem;
     }
 
-    #featured-items > ul li {
-        text-align: center;
-        padding: 30px 0px 30px;
-        font-size: 1.2rem;
-        
+    #phone a {
+        display: block;
+        font-size: 1.1rem;
+        color: $link-color;
     }
-
-    
-
-
-
 }
 
 
-
-   
-
-
-
-
-
-    // width is set to 100% for menu items so that the menu items will span across the whole container and each items will be shown as displaying under each other
-
-
-
-
-
+// .container {
+//     display: grid;
+//     height: 100vh;
+//     grid-template-columns: 1fr 3fr 1fr;
+//     grid-template-rows: 1.5fr repeat(20, 1fr) ;
+// }
 

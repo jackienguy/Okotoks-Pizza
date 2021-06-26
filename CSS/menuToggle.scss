@@ -1,0 +1,66 @@
+$website-font-fam:'Poppins', sans-serif;
+$logo-size: 5vh;
+$header-height: 10vh;
+$bkg-color: #E0DBDB;
+
+
+
+
+
+
+#menu {
+    display: none;
+}
+
+#menu-toggle:checked ~ div {
+    display: block;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#toggle-label {
+    position: absolute;
+    top: 0px;
+    // top 0 to keep on the navbar
+    margin-left: 50px;
+    // margin left to align with li
+    border-radius: 1px solid white;
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    // display flex so can use align item to center the label
+}
+
+
+#menu > ul {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    // top is relative to the position of header navbar. Moving it 100% of way down
+    list-style: none;
+    // list-style none removes the bullet points
+    background-color: rosybrown;
+    
+}
+
+#menu a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: red;
+}
+
+
+#menu li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 1.3rem;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+    color: black;
+}

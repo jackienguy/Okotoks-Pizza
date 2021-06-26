@@ -1,15 +1,13 @@
-$website-font-fam:'Poppins', sans-serif;
-$logo-size: 75px;
-$header-height: 10vh;
 
-header {
-    height: $header-height;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    justify-items: center;
-    align-items: center;
-    position: sticky;
-    background-color: black;
-}
+// header
+$grid-temp-col: 1fr 4fr 2fr;
+$header-height: 12vh;
+$hd-link-color: red;
+$hd-link-font-size: 1.1em;
+$hd-link-pad: 7px;
+$site-logo-width: 90px;
+$website-font-fam:'Poppins', sans-serif;
+$nav-bkg-color: black;
+$link-color: rgb(226, 36, 36)
+
 

@@ -3,114 +3,90 @@
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  background-color: #E0DBDB;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #f2e9e4;
 }
 
 header {
-  height: 10vh;
+  background-color: black;
+  height: 12vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: 1fr 4fr 2fr;
   justify-items: center;
   align-items: center;
   position: sticky;
-  background-color: black;
-}
-
-#container {
-  display: grid;
-  height: 100%;
-  grid-template-columns: repeat(auto-fit, 1fr);
-  grid-template-rows: repeat(auto-fit, 2fr);
-  justify-items: center;
+  top: 0px;
 }
 
 #site-logo {
-  width: 10vh;
-  padding: 2px 3px;
+  width: 90px;
+  top: 0px;
+  margin-right: auto;
 }
 
-#menu {
-  display: none;
-  position: fixed;
-  height: 80vh;
-  background: #ac5a5a;
-}
-
-#menu-toggle:checked ~ div {
-  display: block;
+#menu-toggle-label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  color: #e22424;
+  padding: 25px 20px 0px 20px;
+  font-size: 1.5rem;
 }
 
 #menu-toggle {
   display: none;
 }
 
-label {
-  color: white;
+#closes {
+  display: none;
 }
 
-#menu a {
-  color: white;
-  text-decoration: none;
-  list-style-type: none;
-  padding: 6px 12px;
-  border-radius: 2px;
+#nav-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav-menu ul li {
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 1.1rem;
+  display: none;
+}
+
+#menu-toggle:checked ~ #nav-menu li {
   display: block;
+  top: 100px;
 }
 
-a:hover {
-  background-color: #575555;
+#nav-menu ul li a {
+  text-decoration: none;
+  color: #e22424;
 }
 
-#quick-menu {
-  background-color: white;
-  border-radius: 3px;
-  border: 1px solid #c9c3c3;
-  width: 60vw;
-  margin-left: 18vw;
-  padding: 1vh 5vw;
+#phone a {
+  display: none;
 }
 
-footer {
-  height: 20vh;
-  background-color: black;
-}
-
-footer > div h3, p, a {
-  color: white;
-}
-
-@media only screen and (max-width: 400px) {
-  #quick-menu {
+@media only screen and (min-width: 768px) {
+  #menu-toggle-label {
     display: none;
   }
-  .main-heading {
+  #nav-menu ul {
+    flex-direction: row;
+  }
+  #nav-menu ul li {
     display: block;
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  #container {
-    height: 100vh;
-    width: 100%;
-    margin: 5% 0;
-  }
-  #main-aboutUs {
-    grid-row: 1/2;
-  }
-  #main-aboutUs > article > p {
-    text-align: center;
-    padding: 10px;
     font-size: 1.1rem;
   }
-  #featured-items > ul li {
-    text-align: center;
-    padding: 30px 0px 30px;
-    font-size: 1.2rem;
+  #phone a {
+    display: block;
+    font-size: 1.1rem;
+    color: #e22424;
   }
 }
 /*# sourceMappingURL=style.css.map */

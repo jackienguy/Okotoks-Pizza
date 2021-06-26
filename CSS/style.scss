@@ -20,21 +20,26 @@ header {
     width: 100%;
     display: grid;
     grid-template-columns: $grid-temp-col;
-   justify-items: center;
-   align-items: center;
-   position: sticky;
-   top: 0px;
+    justify-items: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 #site-logo {
     width: $site-logo-width;
     top: 0px;
     margin-right: auto; 
+    display: block;
+    position: absolute;
     // Auto used to push logo to the very left on mobile
+    // Position as absolute to take position relateive to nearest position ancestor #nav-bar
 }
 
 #menu-toggle-label {
     position: absolute;
+     // Position as absolute to take position relateive to nearest position ancestor #nav-bar
     right: 0;
     top: 0;
     cursor: pointer;
@@ -52,7 +57,6 @@ header {
 }
 
 #nav-menu ul {
-    // Display inline-flex used to expand the <li> litems in inline direction
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,14 +66,21 @@ header {
     font-size: 1.5rem;
     list-style: none;
     padding: 1.1rem;
+    margin: 0;
     display: none;
     // nav menu items are set to display to none so it is not visible unless checkbox is clicked
+    position: relative;
+    // positoned as relative to inherit the static position of <header>
+    width: 90vw;
+    top: 100px;
+    background-color: rgb(218, 200, 200);
+    text-align: center;
+    z-index: 1;
 }
 
 #menu-toggle:checked ~ #nav-menu li {
     display: block;
-    top: 100px;
-
+  
 }
 
 #nav-menu ul li a {
@@ -77,11 +88,88 @@ header {
     color: $link-color;
 }
 
+#nav-menu:hover ul li a {
+    color: rgb(151, 10, 10);
+    font: 1.7rem;
+}
+
+
 #phone a {
     display: none;
 }
 
-// Desktop Style
+// Menu Page  Style 
+.menu-img-display {
+    background-image: url("https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
+    background-repeat: no-repeat;
+    border: 2px solid white ;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 30vh;
+    width: 100%;
+    background-size: cover;
+    margin-top: 50px;
+
+    #menu-signature-pizza {
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #menu-calzones {
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #menu-pastas {
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #menu-beverages {
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 3fr;
+    justify-items: center;
+    height: 70vh;
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+
+    .menu-items {
+        padding: 20px;
+        width: 70vw;
+    }
+
+    .menu-items li {
+        list-style: none;
+    }
+}
+
+
+
+
+
+
+#link-menu-category {
+    display: none;
+}
+
+
+
+
+
+
+
+// Media Query - Desktop 
 @media only screen and (min-width: 768px) {
     #menu-toggle-label {
         display: none;
@@ -104,11 +192,4 @@ header {
     }
 }
 
-
-// .container {
-//     display: grid;
-//     height: 100vh;
-//     grid-template-columns: 1fr 3fr 1fr;
-//     grid-template-rows: 1.5fr repeat(20, 1fr) ;
-// }
 

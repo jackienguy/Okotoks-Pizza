@@ -3,6 +3,7 @@
 * { 
     padding: 0;
     margin: 0;
+
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 header {
     background-color: $nav-bkg-color;
     height: $header-height;
-    width: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: $grid-temp-col;
     justify-items: center;
@@ -25,6 +26,8 @@ header {
     position: sticky;
     top: 0px;
     z-index: 1;
+    
+
 }
 
 #site-logo {
@@ -32,7 +35,9 @@ header {
     top: 0px;
     margin-right: auto; 
     display: block;
+    align-self: center;
     position: absolute;
+    padding: 1vh;
     // Auto used to push logo to the very left on mobile
     // Position as absolute to take position relateive to nearest position ancestor #nav-bar
 }
@@ -46,13 +51,11 @@ header {
     color: $link-color;
     padding: 25px 20px 0px 20px;
     font-size: 1.5rem;
+    grid-column: 4/5;
+    
 }
 
 #menu-toggle {
-    display: none;
-}
-
-#closes {
     display: none;
 }
 
@@ -71,8 +74,8 @@ header {
     // nav menu items are set to display to none so it is not visible unless checkbox is clicked
     position: relative;
     // positoned as relative to inherit the static position of <header>
-    width: 90vw;
-    top: 100px;
+    width: 92vw;
+    top: 90px;
     background-color: rgb(218, 200, 200);
     text-align: center;
     z-index: 1;
@@ -88,14 +91,88 @@ header {
     color: $link-color;
 }
 
-#nav-menu:hover ul li a {
-    color: rgb(151, 10, 10);
-    font: 1.7rem;
-}
-
 
 #phone a {
     display: none;
+}
+
+// Home Page Style
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 70vh;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    overflow: auto;
+    margin: 30px 0px;
+
+    #quick-menu {
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        justify-self: center;
+    }
+
+
+    #main-aboutUs, #featured-items {
+        grid-column: 1/ span 2;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #location {
+        grid-column: 2/ span 2;
+        grid-row: 2/ span 1;
+        text-align: center;
+
+        #map {
+            grid-column: 1/ span 2;
+            overflow: auto;
+            height: 30vh;
+            width: 90vw;
+            border: 2px solid white;
+            border-radius: 5px;
+            margin: 15px 0px;
+        }
+
+        #address {
+            text-align: left;
+        }
+
+    }
+}
+
+#food-carousel {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    overflow-y: auto;
+    border: 2px solid white;
+   
+
+    #item-1, #item2 img {
+        width: 10px;
+        height: 8px;
+    }
+}
+
+// About Us Style 
+.about-container  {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 1fr repeat(2,2fr);
+    justify-items: center;
+    align-items: center;
+
+    #our-story, #family-owned, #fresh-ingredients {
+        grid-column: 1/ span 3;
+        padding: 20px;
+        text-align: center;
+    }
 }
 
 // Menu Page  Style 
@@ -143,6 +220,7 @@ header {
     height: 70vh;
     width: 100%;
     margin: 20px 0px 20px 0px;
+    overflow: auto;
 
     .menu-items {
         padding: 20px;
@@ -154,23 +232,109 @@ header {
     }
 }
 
-
-
-
-
-
 #link-menu-category {
     display: none;
+}
+
+// COntact Us Style
+.contactUs-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-items: center;
+    height: 70vh;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+    #contact-us, #map-location {
+        grid-column: 1/ 2;
+        padding: 20px;
+    }
+
+    .contact-location  {
+        padding: 10px;
+    }
+
+
+
+// Footer Style 
+footer {
+    // background-color: $nav-bkg-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr repeat(2, 1fr) 0.8fr;
+    justify-items: center;
+    height: 50vh;
+    width: 100%;
+    background-color: $nav-bkg-color;
+
+    div {
+        color: $link-color;
+        text-align: center;
+    }
+
+    div i {
+        color: white;
+    }
 }
 
 
 
 
+// Media Query - Tablet
+@media only screen and (min-width: 600px) {
+    // nav-bar tablet style
+    #phone a {
+        display: block;
+        font-size: 0.8rem;
+        color: $link-color;
+        align-self: center;
+    }
 
+    // Home Page Tablet Style
+    #food-carousel {
+        height: 50vh;
+        width: 80vw;
+        border-radius: 15px;
+    }
 
+    // Menu Page Tablet Style
+    .menu-img-display {
+        height: 50vh;
+    
+    // // Contact-Us Tablet Style
+    // #contact-us {
+    //     grid-column: 1/ 2;
+    // }
+
+    // #map-location {
+    //     grid-column: 2/ 3;
+    // }
+
+    // Footer Style 
+footer {
+    // background-color: $nav-bkg-color;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    div i {
+        color: white;;
+    }
+
+    #hours h3, p {
+        text-align: left;
+    }
+
+    div h3, p, a, i {
+        font-size: 0.9rem;
+    }
+}
 
 // Media Query - Desktop 
 @media only screen and (min-width: 768px) {
+//    Nav-bar desktop style
     #menu-toggle-label {
         display: none;
         // display set to none to hide toggle menu on desktop screen
@@ -181,15 +345,39 @@ header {
     }
 
     #nav-menu ul li {
+        display: none;
+        font-size: 1.1rem;  
+    }
+
+    #nav-menu ul li a {
         display: block;
-        font-size: 1.1rem;
+        font-size: 1.1rem;  
     }
 
     #phone a {
         display: block;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         color: $link-color;
     }
-}
 
+
+    #nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+// About Us Desktop Style 
+    #family-owned {
+        font-size: 0.6rem;
+        grid-column: 1/2;
+        grid-column: 2/3;
+        height: 60vh;
+    }
+
+ // Menu Page Desktop Style
+    .menu-img-display {
+        width: 80vw;
+    }
+}
 

@@ -38,16 +38,36 @@
         </div>
     </header>
 
-    <main class="container">
-        <section id="hero"> 
-            
-        </section>
+    <!-- Hero Section -->
+    <section id="main-hero"> 
+        <div id="video-container">
+            <video width=“1080” height=“720” controls>
+                <source src=“pizza.mp4” type=“video/mp4”>YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG</video>
+        </div>  
+         </section>
 
+    <main class="container">
+        
         <section id="quick-menu">
-            <a href="">Pizzas</a>
-            <a href=""> Calzones</a>
-            <a href="">Pastas</a>
-            <a href="">Beverages</a>
+            <div id="quick-menu-img">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1593246049226-ded77bf90326?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBlcHBlcm9uaSUyMHBpenphfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Pizza">
+                    <h3>Pizza</h3>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1536964549204-cce9eab227bd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2Fsem9uZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Calzones">
+                    <h3>Calzone</h3>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1612152328178-4a6c83d96429?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHBhc3RhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Pastas">
+                    <h3>Pasta</h3>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1592113895652-d9042d39552f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmV2ZXJhZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Beverages">
+                    <h3>Beverages</h3>
+                </figure>
+               
+            </div>   
         </section>
 
         <section id="main-aboutUs">
@@ -59,18 +79,22 @@
         </section>
 
         <section id="featured-items">
-            <div id="food-carousel">
-                <div class="wrapper">
-                    <div id="item-1">
-                        <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80" alt="Vegetarian Pizza">
+            <div class="carasouel-container">
+                <div id="carasouel">
+                    <div id="track">
+                        <figure class="item">
+                            <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyYm9uYXJhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Carbonara">
+                        </figure>
+                        <figure class="item">
+                            <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHBpenphfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Margherita Pizza">
+                        </figure>     
+                    </div>
+                        </figure>
+                        <figure class="item">
+                            <img src="https://images.unsplash.com/photo-1597131628347-c769fc631754?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHNwYWdoZXR0aXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="">
+                        </figure>
                     </div>
                 </div>
-
-                <div class="wrapper">
-                    <div id="item-2">
-                        <img src="https://images.unsplash.com/photo-1516100882582-96c3a05fe590?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHBlbm5lJTIwcGFzdGF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Spaghetti">
-                    </div>
-                 </div>
             </div>
 
             <div id="feature">
@@ -80,6 +104,13 @@
                     <ul>Margherita</ul>
                     <ul>Penne Alla Boscaiola</ul>
                 </li>
+            </div>
+        </section>
+
+        <section id="main-map-location">
+            <div id="main-map">
+                <h2>Come Visit Us</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80817.26201972517!2d-114.03636043698224!3d50.72848306489721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa224df5fbe194cd0!2sokotoks%20donair%20and%20pizza!5e0!3m2!1sen!2sca!4v1624578842547!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
@@ -102,7 +133,8 @@
         <i class="fab fa-facebook"></i>
     </div>
     <div id="copy-right">
-        <p>2021 Okotoks Pizza. All Rights Reserved</p>   
+        <p> Copyright &copy; 2021 Okotoks Pizza. All Rights Reserved</p>
+           <!-- &copy = html code for copy right symbol -->
     </div>
 </footer>
 </html>

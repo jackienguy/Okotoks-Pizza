@@ -1,0 +1,37 @@
+
+$grid-col-width: 1fr 5fr 0.8fr ;
+$header-height: 11vh;
+$hd-link-color: red;
+$hd-link-font-size: 1.1em;
+$hd-link-pad: 7px;
+$site-logo-width: 4.3rem;
+$website-font-fam:'Poppins', sans-serif;
+$nav-bkg-color: black;
+$link-color: rgb(226, 36, 36);
+
+// Tablet view
+@media only screen and (min-width: 600px) {
+    // nav-bar tablet style
+    #toggle-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        display: inline;
+        background-color: transparent;
+        top: 0;
+
+    }
+
+    .nav-menu a {
+        display: inline-block;
+        color: $link-color;
+        font-size: 1.3rem;
+        vertical-align: center;
+    }
+
+    #site-logo {
+        font-size: 4.5rem;
+        vertical-align: middle;
+    }
+}

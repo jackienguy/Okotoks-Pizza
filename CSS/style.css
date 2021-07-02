@@ -27,10 +27,10 @@ header {
 header #site-logo {
   width: 4.3rem;
   grid-column: 1/2;
-  display: block;
   top: 0;
   position: absolute;
   padding: 3px;
+  vertical-align: middle;
 }
 
 #toggle-btn {
@@ -55,6 +55,10 @@ header #site-logo {
 .nav-menu {
   display: none;
   align-content: center;
+  background-color: #cf7575;
+  top: 55px;
+  position: relative;
+  width: 100vw;
 }
 
 .nav-menu a {
@@ -62,52 +66,11 @@ header #site-logo {
   text-decoration: none;
   text-align: center;
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 20px;
 }
 
 .nav-menu a:hover {
-  background-color: rgb 236, 188, 188;
-  padding: 10px;
-  color: black;
-}
-
-#toggle-btn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding-top: 1.2rem;
-  padding-right: 1.2rem;
-  cursor: pointer;
-  color: #e22424;
-  font-size: 1.5rem;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-#menu-toggle:checked ~ .nav-menu {
-  display: block;
-}
-
-.nav-menu {
-  display: none;
-  align-content: center;
-}
-
-.nav-menu a {
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  font-size: 1.3rem;
-  margin: 20px;
-}
-
-.nav-menu a:hover {
-  background-color: rgb 236, 188, 188;
-  padding: 10px;
   color: black;
 }
 
@@ -269,7 +232,6 @@ header #site-logo {
 
 .contactUs-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-column: repeat(2, 1fr);
   width: 80vw;
   min-height: 69vh;
@@ -331,17 +293,28 @@ footer div i {
   color: white;
 }
 
+@media only screen and (min-width: 600px) and (min-width: 600px) {
+  #toggle-btn {
+    display: none;
+  }
+  .nav-menu {
+    display: inline;
+    background-color: transparent;
+    top: 0;
+  }
+  .nav-menu a {
+    display: inline-block;
+    color: #e22424;
+    font-size: 1.3rem;
+    vertical-align: center;
+  }
+  #site-logo {
+    font-size: 4.5rem;
+    vertical-align: middle;
+  }
+}
+
 @media only screen and (min-width: 600px) {
-  .nav-bar #toggle-btn {
-    display: none;
-  }
-  .nav-bar #nav-menu {
-    flex-direction: row;
-  }
-  .nav-bar #nav-menu ul li {
-    display: none;
-    font-size: 0.9rem;
-  }
   .menu-img-display {
     height: 50vh;
   }

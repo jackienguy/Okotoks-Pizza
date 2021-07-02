@@ -1,0 +1,21 @@
+@media only screen and (min-width: 600px) {
+  #toggle-btn {
+    display: none;
+  }
+  .nav-menu {
+    display: inline;
+    background-color: transparent;
+    top: 0;
+  }
+  .nav-menu a {
+    display: inline-block;
+    color: #e22424;
+    font-size: 1.3rem;
+    vertical-align: center;
+  }
+  #site-logo {
+    font-size: 4.5rem;
+    vertical-align: middle;
+  }
+}
+/*# sourceMappingURL=MediaQueryTablet.css.map */

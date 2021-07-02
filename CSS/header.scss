@@ -27,10 +27,10 @@ header {
 header #site-logo {
     width: $site-logo-width;
     grid-column: 1/2;
-    display: block;
     top: 0;
     position: absolute;
     padding: 3px;
+    vertical-align: middle;
     // Position as absolute to take position relateive to nearest position ancestor #nav-bar
 }
 

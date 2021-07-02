@@ -1,0 +1,56 @@
+
+$grid-col-width: 1fr 5fr 0.8fr ;
+$header-height: 11vh;
+$hd-link-color: red;
+$hd-link-font-size: 1.1em;
+$hd-link-pad: 7px;
+$site-logo-width: 4.3rem;
+$website-font-fam:'Poppins', sans-serif;
+$nav-bkg-color: black;
+$link-color: rgb(226, 36, 36);
+
+
+// navbar toggle menu
+
+#toggle-btn {
+    position: absolute;
+     // Position as absolute to take position relateive to nearest position ancestor #nav-bar
+    right: 0;
+    top: 0;
+    padding-top: 1.2rem;
+    padding-right: 1.2rem;
+    cursor: pointer;
+    color: $link-color;
+    font-size: 1.5rem; 
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav-menu {
+    display: block;
+}
+
+.nav-menu {
+    display: none;
+    align-content: center;
+    background-color: rgb(207, 117, 117);
+    top: 55px;
+    position: relative;
+    width: 100vw;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+    margin: 20px;
+}
+
+.nav-menu a:hover {
+    color: black;
+}
+

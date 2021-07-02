@@ -1,0 +1,41 @@
+#toggle-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 1.2rem;
+  padding-right: 1.2rem;
+  cursor: pointer;
+  color: #e22424;
+  font-size: 1.5rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .nav-menu {
+  display: block;
+}
+
+.nav-menu {
+  display: none;
+  align-content: center;
+  background-color: #cf7575;
+  top: 55px;
+  position: relative;
+  width: 100vw;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+.nav-menu a:hover {
+  color: black;
+}
+/*# sourceMappingURL=nav.css.map */

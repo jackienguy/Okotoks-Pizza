@@ -15,47 +15,7 @@ body, html {
 // navbar style
 @import 'header.scss';
 
-// navbar toggle menu
-
-#toggle-btn {
-    position: absolute;
-     // Position as absolute to take position relateive to nearest position ancestor #nav-bar
-    right: 0;
-    top: 0;
-    padding-top: 1.2rem;
-    padding-right: 1.2rem;
-    cursor: pointer;
-    color: $link-color;
-    font-size: 1.5rem; 
-}
-
-#menu-toggle {
-    display: none;
-}
-
-#menu-toggle:checked ~ .nav-menu {
-    display: block;
-}
-
-.nav-menu {
-    display: none;
-    align-content: center;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    font-size: 1.3rem;
-    margin: 20px;
-}
-
-.nav-menu a:hover {
-    background-color: rgb(236, 188, 188);
-    padding: 10px;
-    color: black;
-}
+@import 'nav.scss';
 
 // Home Page Style
 
@@ -225,7 +185,6 @@ body, html {
 // Contact Us Style
 .contactUs-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-column: repeat(2,1fr);
     width: 80vw;
     min-height: 69vh;
@@ -296,22 +255,7 @@ footer {
 
 // Media Query - Tablet
 @media only screen and (min-width: 600px) {
-    // nav-bar tablet style
-    #toggle-btn {
-        display: none;
-    }
-
-    .nav-menu {
-        display: inline;
-        background-color: none;
-    }
-
-    .nav-menu a {
-        display: inline-block;
-        color: $link-color;
-    }
-
-    
+  @import 'MediaQueryTablet.scss';
     // Home Page Tablet Style
     
     

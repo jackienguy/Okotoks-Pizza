@@ -1,11 +1,11 @@
 
 // header
-$grid-col-width: 10vw 80vw 10vw;
-$header-height: 12vh;
+$grid-col-width: 1fr 5fr 0.8fr ;
+$header-height: 11vh;
 $hd-link-color: red;
 $hd-link-font-size: 1.1em;
 $hd-link-pad: 7px;
-$site-logo-width: 80px;
+$site-logo-width: 4.3rem;
 $website-font-fam:'Poppins', sans-serif;
 $nav-bkg-color: black;
 $link-color: rgb(226, 36, 36);
@@ -13,6 +13,7 @@ $link-color: rgb(226, 36, 36);
 header {
     background-color: $nav-bkg-color;
     height: $header-height;
+    top: 0;
     width: 100vw;
     display: grid;
     grid-template-columns: $grid-col-width;
@@ -23,74 +24,14 @@ header {
     z-index: 1;
 }
 
-#site-logo {
+header #site-logo {
     width: $site-logo-width;
-    top: 0px;
-    margin-right: auto; 
+    grid-column: 1/2;
     display: block;
-    align-self: center;
+    top: 0;
     position: absolute;
-    padding: 1vh;
-    // Auto used to push logo to the very left on mobile
+    padding: 3px;
     // Position as absolute to take position relateive to nearest position ancestor #nav-bar
 }
 
-#menu-toggle-label {
-    position: absolute;
-     // Position as absolute to take position relateive to nearest position ancestor #nav-bar
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    color: $link-color;
-    padding: 25px 20px 0px 20px;
-    font-size: 1.5rem;
-    grid-column: 4/5;
-    
-}
-
-#menu-toggle {
-    display: none;
-}
-
-#nav-menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#nav-menu ul li {
-    font-size: 1.5rem;
-    list-style: none;
-    padding: 1.1rem;
-    margin: 0;
-    display: none;
-    // nav menu items are set to display to none so it is not visible unless checkbox is clicked
-    position: relative;
-    // positoned as relative to inherit the static position of <header>
-    width: 100vw;
-    top: 100px;
-    background-color: rgb(218, 200, 200);
-    text-align: center;
-    z-index: 1;
-}
-
-#menu-toggle:checked ~ #nav-menu li {
-    display: block;
-  
-}
-
-#nav-menu ul li a {
-    text-decoration: none;
-    color: $link-color;
-}
-
-#nav-menu ul li a:hover,
-#nav-menu ul li a:focus {
-    color: green;
-}
-
-
-#phone a {
-    display: none;
-}
 

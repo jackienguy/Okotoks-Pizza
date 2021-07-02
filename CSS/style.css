@@ -12,10 +12,11 @@ body, html {
 
 header {
   background-color: black;
-  height: 12vh;
+  height: 11vh;
+  top: 0;
   width: 100vw;
   display: grid;
-  grid-template-columns: 10vw 80vw 10vw;
+  grid-template-columns: 1fr 5fr 0.8fr;
   justify-items: center;
   align-items: center;
   position: sticky;
@@ -23,67 +24,91 @@ header {
   z-index: 1;
 }
 
-#site-logo {
-  width: 80px;
-  top: 0px;
-  margin-right: auto;
+header #site-logo {
+  width: 4.3rem;
+  grid-column: 1/2;
   display: block;
-  align-self: center;
+  top: 0;
   position: absolute;
-  padding: 1vh;
+  padding: 3px;
 }
 
-#menu-toggle-label {
+#toggle-btn {
   position: absolute;
   right: 0;
   top: 0;
+  padding-top: 1.2rem;
+  padding-right: 1.2rem;
   cursor: pointer;
   color: #e22424;
-  padding: 25px 20px 0px 20px;
   font-size: 1.5rem;
-  grid-column: 4/5;
 }
 
 #menu-toggle {
   display: none;
 }
 
-#nav-menu ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#nav-menu ul li {
-  font-size: 1.5rem;
-  list-style: none;
-  padding: 1.1rem;
-  margin: 0;
-  display: none;
-  position: relative;
-  width: 100vw;
-  top: 100px;
-  background-color: #dac8c8;
-  text-align: center;
-  z-index: 1;
-}
-
-#menu-toggle:checked ~ #nav-menu li {
+#menu-toggle:checked ~ .nav-menu {
   display: block;
 }
 
-#nav-menu ul li a {
-  text-decoration: none;
-  color: #e22424;
-}
-
-#nav-menu ul li a:hover,
-#nav-menu ul li a:focus {
-  color: green;
-}
-
-#phone a {
+.nav-menu {
   display: none;
+  align-content: center;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-size: 1.3rem;
+  margin: 20px;
+}
+
+.nav-menu a:hover {
+  background-color: rgb 236, 188, 188;
+  padding: 10px;
+  color: black;
+}
+
+#toggle-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 1.2rem;
+  padding-right: 1.2rem;
+  cursor: pointer;
+  color: #e22424;
+  font-size: 1.5rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .nav-menu {
+  display: block;
+}
+
+.nav-menu {
+  display: none;
+  align-content: center;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-size: 1.3rem;
+  margin: 20px;
+}
+
+.nav-menu a:hover {
+  background-color: rgb 236, 188, 188;
+  padding: 10px;
+  color: black;
 }
 
 #main-hero {
@@ -112,7 +137,7 @@ header {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   min-height: 100%;
   width: 100%;
   justify-items: center;
@@ -122,7 +147,8 @@ header {
 }
 
 .container #quick-menu {
-  grid-column: 1/3;
+  grid-column: 1/-1;
+  justify-content: center;
 }
 
 .container #quick-menu #quick-menu-img {
@@ -144,25 +170,6 @@ header {
   grid-column: 1/3;
 }
 
-.container #featured-items #carasouel {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  position: relative;
-  overflow: hidden;
-}
-
-.container #featured-items #carasouel #track {
-  position: absolute;
-  display: flex;
-}
-
-.container #featured-items #carasouel #track .item {
-  height: 300px;
-  width: 300px;
-  background-color: #fff;
-}
-
 .container #main-map-location {
   grid-column: 1/3;
 }
@@ -173,7 +180,7 @@ header {
 
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-items: center;
   align-items: center;
   overflow: hidden;
@@ -181,36 +188,35 @@ header {
   height: 100%;
 }
 
-#our-story, #family-owned, #fresh-ingredients {
-  grid-column: 1/3;
+.about-container #our-story, .about-container #fresh-ingredients {
+  grid-column: 1/-1;
   padding: 30px;
   text-align: center;
   margin: 30px;
 }
 
-#our-story {
+.about-container #our-story {
   border: 3px solid #da7d7d;
 }
 
-#family-owned {
+.about-container #family-owned {
   background-color: #e48458;
 }
 
-#fam-photo {
-  width: 100%;
-  max-height: auto;
-  grid-column: 1/3;
+.about-container #fam-photo {
+  max-width: 100%;
+  height: 200px;
+  object-fit: contain;
   align-self: center;
 }
 
-#fresh-ingredients {
+.about-container #fresh-ingredients {
   background-color: #e48458;
 }
 
-.ingredients img {
+.about-container .ingredients img {
   width: 100%;
   height: auto;
-  grid-column: 1/2;
   border: 2px solid black;
   padding: 5px;
   border-radius: 10px;
@@ -230,25 +236,7 @@ header {
   overflow: auto;
 }
 
-.menu-img-display #menu-signature-pizza {
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.menu-img-display #menu-calzones {
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.menu-img-display #menu-pastas {
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.menu-img-display #menu-beverages {
+.menu-img-display #menu-signature-pizza, .menu-img-display #menu-calzones, .menu-img-display #menu-pastas, .menu-img-display #menu-beverages {
   color: white;
   text-align: center;
   margin-top: 20px;
@@ -272,6 +260,7 @@ header {
 
 .menu-container .menu-items li {
   list-style: none;
+  padding: 10px;
 }
 
 #link-menu-category {
@@ -280,31 +269,36 @@ header {
 
 .contactUs-container {
   display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
-  min-height: calc(100vh - 72px - 120px);
+  grid-template-columns: 1fr 1fr;
+  grid-column: repeat(2, 1fr);
+  width: 80vw;
+  min-height: 69vh;
+  justify-items: center;
+  align-items: center;
 }
 
-#contact-us, #map-location {
+.contactUs-container #contact-us {
   grid: 1/3;
+  grid-row: 1/2;
   margin-top: 35px;
 }
 
-#map-location {
+.contactUs-container #map-location {
   margin-bottom: 30px;
+  grid-row: 2/3;
 }
 
-.contact-location {
+.contactUs-container .contact-location {
   padding: 20px;
 }
 
-#location {
+.contactUs-container #location {
   grid-column: 2/ span 2;
   grid-row: 2/ span 1;
   text-align: center;
 }
 
-#location #map {
+.contactUs-container #location #map {
   grid-column: 1/ span 2;
   overflow: auto;
   height: 30vh;
@@ -314,17 +308,18 @@ header {
   margin: 15px 0px;
 }
 
-#location #address {
+.contactUs-container #location #address {
   text-align: left;
 }
 
 footer {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 0.5fr 1fr;
   justify-items: center;
   height: 20vh;
   width: 100%;
   background-color: black;
+  overflow: auto;
 }
 
 footer div {
@@ -336,30 +331,30 @@ footer div i {
   color: white;
 }
 
-@media only screen and (min-width: 650px) {
-  #phone a {
-    display: block;
-    font-size: 0.8rem;
-    color: #e22424;
-    align-self: center;
+@media only screen and (min-width: 600px) {
+  .nav-bar #toggle-btn {
+    display: none;
   }
-  #food-carousel {
-    height: 50vh;
-    width: 80vw;
-    border-radius: 15px;
+  .nav-bar #nav-menu {
+    flex-direction: row;
+  }
+  .nav-bar #nav-menu ul li {
+    display: none;
+    font-size: 0.9rem;
   }
   .menu-img-display {
     height: 50vh;
   }
-  .contactUs-container {
-    flex-direction: row;
-  }
-  .contact-location h2 {
+  .contactUs-container #contact-us #contact-location h2 p {
     font-size: 0.9rem;
+  }
+  .contactUs-container #map-location {
+    grid-row: 1/4;
+    font-size: 1.1rem;
   }
   footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(autofit, minmax(0.5px, 1fr));
     align-items: center;
   }
   footer div i {
@@ -373,36 +368,15 @@ footer div i {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  #menu-toggle-label {
-    display: none;
-  }
-  #nav-menu ul {
-    flex-direction: row;
-  }
-  #nav-menu ul li {
-    display: none;
-    font-size: 1.1rem;
-  }
-  #nav-menu ul li a {
-    display: block;
-    font-size: 1.1rem;
-  }
-  #phone a {
-    display: block;
-    font-size: 0.9rem;
-    color: #e22424;
-  }
-  #nav-menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #family-owned {
-    font-size: 0.6rem;
-    grid-column: 1/2;
+@media only screen and (min-width: 800px) {
+  .about-container #family-owned {
     grid-column: 2/3;
-    height: 60vh;
+    grid-row: 2/3;
+    font-size: 1.4rem;
+  }
+  .about-container #fam-photo {
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
   .menu-img-display {
     width: 80vw;

@@ -1,9 +1,10 @@
 header {
   background-color: black;
-  height: 12vh;
+  height: 11vh;
+  top: 0;
   width: 100vw;
   display: grid;
-  grid-template-columns: 10vw 80vw 10vw;
+  grid-template-columns: 1fr 5fr 0.8fr;
   justify-items: center;
   align-items: center;
   position: sticky;
@@ -11,66 +12,12 @@ header {
   z-index: 1;
 }
 
-#site-logo {
-  width: 80px;
-  top: 0px;
-  margin-right: auto;
+header #site-logo {
+  width: 4.3rem;
+  grid-column: 1/2;
   display: block;
-  align-self: center;
-  position: absolute;
-  padding: 1vh;
-}
-
-#menu-toggle-label {
-  position: absolute;
-  right: 0;
   top: 0;
-  cursor: pointer;
-  color: #e22424;
-  padding: 25px 20px 0px 20px;
-  font-size: 1.5rem;
-  grid-column: 4/5;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-#nav-menu ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#nav-menu ul li {
-  font-size: 1.5rem;
-  list-style: none;
-  padding: 1.1rem;
-  margin: 0;
-  display: none;
-  position: relative;
-  width: 100vw;
-  top: 100px;
-  background-color: #dac8c8;
-  text-align: center;
-  z-index: 1;
-}
-
-#menu-toggle:checked ~ #nav-menu li {
-  display: block;
-}
-
-#nav-menu ul li a {
-  text-decoration: none;
-  color: #e22424;
-}
-
-#nav-menu ul li a:hover,
-#nav-menu ul li a:focus {
-  color: green;
-}
-
-#phone a {
-  display: none;
+  position: absolute;
+  padding: 3px;
 }
 /*# sourceMappingURL=header.css.map */

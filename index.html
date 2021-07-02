@@ -17,32 +17,35 @@
 </head>
 <body>
     <header>
-        <div class="nav-bar">
-            <img id="site-logo" src="/photos/opplogo.png" alt="Okotoks Pizza Logo">
-        </div>
         <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" id="menu-toggle-label">
+        <label for="menu-toggle" id="toggle-btn">
             <i class="fas fa-bars"></i>
-            <!-- <i class="fas fa-times-circle" id="close"></i>  - comeback to this -->
         </label>
-        <div id="nav-menu">
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a target="_blank" href="">About Us</a> </li>
-                <li><a target="_blank" href="">Menu</a> </li> 
-                <li><a target="_blank" href="">Location</a></li> 
-            </ul>
-        </div>
-        <div id="phone">
-            <a href="tel:(403) 555-5555"><i class="fas fa-phone-square-alt"></i>(403) 555-5555</a> 
-        </div>
+        <div class class="nav-bar">
+            <a href=""><img id="site-logo" src="/Photos/opplogo.png" alt="Okotoks Pizza Logo"></a>
+        </div> 
+        <div class="nav-menu">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Menu</a>
+            <a href="">Contact Us</a>
+            <a href="tel:(403) 555-5555"><i class="fas fa-phone-square-alt">(403) 555-5555</i></a>
+        </div> 
     </header>
 
     <!-- Hero Section -->
     <section id="main-hero"> 
         <div id="video-container">
-            <video width=“1080” height=“720” controls>
-                <source src=“pizza.mp4” type=“video/mp4”>YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG</video>
+            <iframe 
+            width="" 
+            height="315" 
+            src="https://www.youtube.com/embed/T3AHBe0I0yc" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <!-- <video width=“1080” height=“720” controls>
+                <source src=“pizza.mp4” type=“video/mp4”>YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG</video> -->
         </div>  
          </section>
 

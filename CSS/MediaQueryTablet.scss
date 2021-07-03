@@ -65,7 +65,7 @@ $text-hover: white;
     }
     
     #site-logo {
-        font-size: 6rem;
+        font-size: 100px;
     }
 
     #quick-menu .quick-menu-items a {
@@ -86,10 +86,20 @@ $text-hover: white;
     // - Menu Section - 
 
     .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
-        height: 70vh;
+        height: 60vh;
     } 
 
     #menu-signature-pizza, #menu-calzones, #menu-pastas, #menu-beverages {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
+
+    // - Contact Us Section
+    .contactUs-container {
+        #map-location #map iframe {
+            #map iframe {
+                width: 60vw; 
+              }
+        }
+    }
+
 }

@@ -60,36 +60,42 @@ header {
   top: 55px;
   position: relative;
   width: 100vw;
+  z-index: 1;
 }
 
 .nav-menu a {
-  color: white;
+  color: #e22424;
   text-decoration: none;
   text-align: center;
   display: block;
   font-size: 1.2rem;
   margin: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .nav-menu a:hover {
-  color: black;
+  color: white;
   transition: color 1s;
+  font-size: 1.2rem;
 }
 
 #phone-number {
   right: 0;
-  color: #e22424;
-}
-
-#phone-number {
+  color: black;
   margin: 0;
-  background-color: white;
+  background-color: #e48458;
   width: 35vw;
   height: 5vh;
   padding: 3px;
   position: fixed;
   text-align: center;
   z-index: 1;
+}
+
+#phone-number:hover {
+  color: white;
+  transition: color 1s;
 }
 
 .container {
@@ -102,7 +108,7 @@ header {
 }
 
 .container #hero {
-  background-image: url(https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500), linear-gradient(#000001, black);
+  background-image: url(https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -165,7 +171,7 @@ header {
 .container #featured-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  width: 100vw;
+  width: 90vw;
   justify-content: center;
   margin: 50px 20px;
 }
@@ -214,7 +220,9 @@ header {
 
 .container #main-map-location {
   grid-column: 1/-1;
-  margin: 50px 0;
+  margin-top: 100px;
+  width: 90vw;
+  margin: 0 auto;
 }
 
 .container #main-map-location #main-map h2 {
@@ -223,7 +231,7 @@ header {
   align-self: center;
   background-color: #e48458;
   height: 15vh;
-  width: 100vw;
+  width: 90vw;
   padding-top: 30px;
 }
 
@@ -236,7 +244,7 @@ header {
 
 .about-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
   align-items: center;
   overflow: auto;
@@ -247,7 +255,7 @@ header {
 
 .about-container #our-story, .about-container #fresh-ingredients, .about-container #family-owned {
   grid-column: 1/-1;
-  padding: 30px;
+  padding: 5% 10%;
   text-align: center;
   margin: 30px;
 }
@@ -257,7 +265,7 @@ header {
   border-radius: 10px;
   grid-column: 1/-1;
   font-size: 1.4rem;
-  width: 80vw;
+  width: 75vw;
 }
 
 .about-container #fresh-ingredients, .about-container #family-owned {
@@ -274,32 +282,42 @@ header {
   border: 2px solid black;
   padding: 5px;
   border-radius: 10px;
-  object-fit: co;
+  object-fit: cover;
 }
 
-#follow-us-on-IG {
+.about-container #instagram {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  width: 100%;
-  justify-content: center;
-  overflow-x: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column: 1/-1;
+  margin: 0 auto;
+  width: 70vw;
 }
 
-#follow-us-on-IG #instagram h2 {
+.about-container #instagram h2 {
   text-align: center;
   grid-column: 1/-1;
+  padding: 30px 0;
+  border: 3px solid #d14747;
+  border-radius: 10px;
+  margin-top: 30px;
 }
 
-#follow-us-on-IG #instagram .IG-img {
+.about-container #instagram .IG-img {
   position: relative;
+  margin: 7px;
 }
 
-#follow-us-on-IG #instagram .IG-img a img {
+.about-container #instagram .IG-img a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border: 1px solid black;
   border-radius: 5px;
+}
+
+.about-container #instagram .IG-img a img:hover {
+  opacity: 60%;
+  border: 4px solid #d14747;
 }
 
 .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
@@ -388,30 +406,6 @@ header {
   text-align: center;
 }
 
-.contactUs-container .contact-location1 {
-  grid-column: 3/4;
-}
-
-.contactUs-container #location {
-  grid-column: 2/ span 2;
-  grid-row: 2/ span 1;
-  text-align: center;
-}
-
-.contactUs-container #location #map {
-  grid-column: 1/ span 2;
-  overflow: auto;
-  height: 30vh;
-  width: 90vw;
-  border: 2px solid white;
-  border-radius: 5px;
-  margin: 15px 0px;
-}
-
-.contactUs-container #location #address {
-  text-align: left;
-}
-
 footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -483,7 +477,7 @@ footer #social i {
     font-size: 1.3rem;
   }
   #site-logo {
-    font-size: 6rem;
+    font-size: 100px;
   }
   #quick-menu .quick-menu-items a {
     display: inline-block;
@@ -496,10 +490,13 @@ footer #social i {
     font-size: 1.3rem;
   }
   .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
-    height: 70vh;
+    height: 60vh;
   }
   #menu-signature-pizza, #menu-calzones, #menu-pastas, #menu-beverages {
-    font-size: 1.6rem;
+    font-size: 2rem;
+  }
+  .contactUs-container #map-location #map iframe #map iframe {
+    width: 60vw;
   }
 }
 

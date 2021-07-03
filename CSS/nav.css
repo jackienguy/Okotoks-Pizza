@@ -24,19 +24,23 @@
   top: 55px;
   position: relative;
   width: 100vw;
+  z-index: 1;
 }
 
 .nav-menu a {
-  color: white;
+  color: #e22424;
   text-decoration: none;
   text-align: center;
   display: block;
   font-size: 1.2rem;
   margin: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .nav-menu a:hover {
-  color: black;
+  color: white;
   transition: color 1s;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=nav.css.map */

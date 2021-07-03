@@ -236,12 +236,12 @@ header {
 
 .about-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   justify-items: center;
   align-items: center;
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
-  height: 100%;
+  height: 69vh;
   margin: 0 auto;
 }
 
@@ -275,6 +275,31 @@ header {
   padding: 5px;
   border-radius: 10px;
   object-fit: co;
+}
+
+#follow-us-on-IG {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#follow-us-on-IG #instagram h2 {
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+#follow-us-on-IG #instagram .IG-img {
+  position: relative;
+}
+
+#follow-us-on-IG #instagram .IG-img a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
@@ -438,7 +463,7 @@ footer #social i {
     transition: color 1s;
   }
   #site-logo {
-    font-size: 4.7rem;
+    font-size: 90px;
     vertical-align: middle;
   }
   .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {

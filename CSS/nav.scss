@@ -1,13 +1,16 @@
-
 $grid-col-width: 1fr 5fr 0.8fr ;
 $header-height: 11vh;
 $hd-link-color: red;
 $hd-link-font-size: 1.1em;
 $hd-link-pad: 7px;
-$site-logo-width: 4.3rem;
+$site-logo-width: 70px;
 $website-font-fam:'Poppins', sans-serif;
 $nav-bkg-color: black;
 $link-color: rgb(226, 36, 36);
+$text-block-bkg-color: rgb(228, 132, 88);
+$border-hover-color: rgb(209, 71, 71);
+$text-hover: white;
+$opacity-bkg-color: rgb(136, 133, 133);
 
 
 // navbar toggle menu
@@ -35,7 +38,7 @@ $link-color: rgb(226, 36, 36);
 .nav-menu {
     display: none;
     align-content: center;
-    background-color: rgb(207, 117, 117);
+    background-color: $opacity-bkg-color;
     top: 55px;
     position: relative;
     width: 100vw;

@@ -1,13 +1,15 @@
-
-$grid-col-width: 1fr 5fr 0.5fr ;
+$grid-col-width: 1fr 5fr 0.8fr ;
 $header-height: 11vh;
 $hd-link-color: red;
 $hd-link-font-size: 1.1em;
 $hd-link-pad: 7px;
-$site-logo-width: 4.3rem;
+$site-logo-width: 70px;
 $website-font-fam:'Poppins', sans-serif;
 $nav-bkg-color: black;
 $link-color: rgb(226, 36, 36);
+$text-block-bkg-color: rgb(228, 132, 88);
+$border-hover-color: rgb(209, 71, 71);
+$text-hover: white;
 
 // Tablet view
 @media only screen and (min-width: 600px) {
@@ -33,7 +35,7 @@ $link-color: rgb(226, 36, 36);
     }
 
     .nav-menu a:hover {
-        color: white;
+        color: $text-hover;
         text-decoration: underline;
         transition: color 1s;
     }
@@ -41,5 +43,53 @@ $link-color: rgb(226, 36, 36);
     #site-logo {
         font-size: 4.7rem;
         vertical-align: middle;
+    }
+
+    // - Menu Section -
+    .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
+        height: 50vh;
+    }  
+}
+
+@media only screen and (min-width: 900px) {
+    .nav-menu {
+        display: inline;
+        background-color: transparent;
+        top: 0;
+        grid-column: 2/7;
+        margin-left: 50vw;
+    }
+    
+    .nav-menu a {
+        font-size: 1.3rem;  
+    }
+    
+    #site-logo {
+        font-size: 6rem;
+    }
+
+    #quick-menu .quick-menu-items a {
+        display: inline-block;
+        font-size: 1.4rem;
+    }
+
+    #fresh-ingredients, #family-owned  {
+        font-size: 1.2rem;
+    }
+
+    //  - Main Section 
+    #hero #hero-content {
+        font-size: 1.3rem;
+    }
+    
+
+    // - Menu Section - 
+
+    .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
+        height: 70vh;
+    } 
+
+    #menu-signature-pizza, #menu-calzones, #menu-pastas, #menu-beverages {
+        font-size: 1.6rem;
     }
 }

@@ -25,23 +25,6 @@ body, html {
 
 // Main page hero section
 
-    #video-container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display:flex;
-        justify-content: center;
-    }
-
-    #video-container video {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.6;
-    }
 
 .container {
     display: grid;
@@ -52,15 +35,48 @@ body, html {
     // align-items: center;
     margin: 30px 0px;
     overflow: auto;
+
+    #hero {
+        background-image: url(https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500), linear-gradient(rgba(0, 0, 0.5, 1), rgba(0, 0, 0, 1));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        width: 100vw;
+        height: 60vh ;
+        top: 0;
+        // the background-position is set to center to ensure the image is scaled for all screen size
+        // linear gradient is used to give the a background effect by making the image darker
+
+        #hero-content {
+            color:rgb(255, 255, 255);
+            text-align: left;
+            margin: 30px 20px;
+        }
+
+        #hero-content button {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid black;
+        }
+
+        #hero-content button:hover {
+            background-color: rgb(221, 160, 160);
+        }
+
+        #hero-content button a {
+            text-decoration: none;
+        }
+    }
     
 
     #quick-menu {
         position: relative;
         justify-self: center;
         background-color: $text-block-bkg-color;
-        grid-column: 1/4;
-        margin: 0 auto;
-        width: 50vw;
+        grid-column: 1/-1;
+        margin: 50px;
+        width: 80vw;
         padding: 10px;
         text-align: center;
     }
@@ -68,12 +84,9 @@ body, html {
     #quick-menu .quick-menu-items a {
         display: block;
         text-decoration: none;
-    }
-
-    #main-aboutUs {
-        padding: 15px;
-        text-align: center;
-        grid-column: 1/-1;
+        font-size: 1.2rem;
+        padding: 5px 0;
+        
     }
 
     // Featured Items
@@ -83,6 +96,15 @@ body, html {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         width: 100vw;
         justify-content: center;
+        margin: 50px 0;
+
+        h1 {
+            text-align: center;
+            align-self: center;
+            background-color: $text-block-bkg-color;
+            height: 15vh;
+            padding-top: 30px;
+        }
 
         .item {
             position: relative;
@@ -93,6 +115,14 @@ body, html {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .item img:hover {
+            opacity: 60%;
+            border: 4px solid $border-hover-color;
+            
         }
 
         .item .item-name {
@@ -112,12 +142,30 @@ body, html {
         }
 }
 
-
+    // Visit Us Section
     #main-map-location {
-        grid-column: 1/3;
-        h2 {
-            text-align: center;
+        grid-column: 1/-1;
+        margin: 50px 0;
+
+        #main-map {
+            h2 {
+                grid-row: 1/-1;
+                text-align: center;
+                align-self: center;
+                background-color: $text-block-bkg-color;
+                height: 15vh;
+                width: 100vw;
+                padding-top: 30px;
+            }
+
+            iframe {
+                padding-top: 30px;
+                grid-column: 1/-1;
+                width: 100%;
+                margin: 0 auto;
+            }
         }
+       
     }
 }
 
@@ -267,20 +315,28 @@ body, html {
 footer {
     // background-color: $nav-bkg-color;
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-items: center;
     height: $footer-height;
     width: 100%;
     background-color: $nav-bkg-color;
+    padding: 10px;
     overflow: auto;
 
     div {
         color: $link-color;
         text-align: center;
+        padding: 10px;
     }
 
-    div i {
+    #footer-contact a {
         color: white;
+    }
+
+    #social i {
+        color: white;
+        padding: 5px;
+        font-size: 1.3rem;
     }
 }
 

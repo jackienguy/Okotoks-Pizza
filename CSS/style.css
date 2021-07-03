@@ -81,24 +81,6 @@ header {
   color: #e22424;
 }
 
-#video-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-#video-container video {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -108,13 +90,44 @@ header {
   overflow: auto;
 }
 
+.container #hero {
+  background-image: url(https://images.pexels.com/photos/1049626/pexels-photo-1049626.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500), linear-gradient(#000001, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  top: 0;
+}
+
+.container #hero #hero-content {
+  color: white;
+  text-align: left;
+  margin: 30px 20px;
+}
+
+.container #hero #hero-content button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+.container #hero #hero-content button:hover {
+  background-color: #dda0a0;
+}
+
+.container #hero #hero-content button a {
+  text-decoration: none;
+}
+
 .container #quick-menu {
   position: relative;
   justify-self: center;
   background-color: #e48458;
-  grid-column: 1/4;
-  margin: 0 auto;
-  width: 50vw;
+  grid-column: 1/-1;
+  margin: 50px;
+  width: 80vw;
   padding: 10px;
   text-align: center;
 }
@@ -122,12 +135,8 @@ header {
 .container #quick-menu .quick-menu-items a {
   display: block;
   text-decoration: none;
-}
-
-.container #main-aboutUs {
-  padding: 15px;
-  text-align: center;
-  grid-column: 1/-1;
+  font-size: 1.2rem;
+  padding: 5px 0;
 }
 
 .container #featured-items {
@@ -135,6 +144,15 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 100vw;
   justify-content: center;
+  margin: 50px 0;
+}
+
+.container #featured-items h1 {
+  text-align: center;
+  align-self: center;
+  background-color: #e48458;
+  height: 15vh;
+  padding-top: 30px;
 }
 
 .container #featured-items .item {
@@ -146,6 +164,13 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.container #featured-items .item img:hover {
+  opacity: 60%;
+  border: 4px solid #d14747;
 }
 
 .container #featured-items .item .item-name {
@@ -165,11 +190,25 @@ header {
 }
 
 .container #main-map-location {
-  grid-column: 1/3;
+  grid-column: 1/-1;
+  margin: 50px 0;
 }
 
-.container #main-map-location h2 {
+.container #main-map-location #main-map h2 {
+  grid-row: 1/-1;
   text-align: center;
+  align-self: center;
+  background-color: #e48458;
+  height: 15vh;
+  width: 100vw;
+  padding-top: 30px;
+}
+
+.container #main-map-location #main-map iframe {
+  padding-top: 30px;
+  grid-column: 1/-1;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .about-container {
@@ -307,21 +346,29 @@ header {
 
 footer {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
   height: 20vh;
   width: 100%;
   background-color: black;
+  padding: 10px;
   overflow: auto;
 }
 
 footer div {
   color: #e22424;
   text-align: center;
+  padding: 10px;
 }
 
-footer div i {
+footer #footer-contact a {
   color: white;
+}
+
+footer #social i {
+  color: white;
+  padding: 5px;
+  font-size: 1.3rem;
 }
 
 @media only screen and (min-width: 600px) and (min-width: 600px) {
@@ -338,7 +385,7 @@ footer div i {
   .nav-menu a {
     display: inline-block;
     color: #e22424;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     vertical-align: center;
     text-transform: uppercase;
   }

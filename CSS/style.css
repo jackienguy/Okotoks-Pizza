@@ -8,6 +8,7 @@ body, html {
   height: 100vh;
   font-family: "Poppins", sans-serif;
   background: #f2e9e4;
+  overflow-x: hidden;
 }
 
 header {
@@ -24,8 +25,8 @@ header {
   z-index: 1;
 }
 
-header #site-logo {
-  width: 4.3rem;
+#site-logo {
+  width: 90px;
   grid-column: 1/2;
   top: 0;
   position: absolute;
@@ -72,12 +73,12 @@ header #site-logo {
 
 .nav-menu a:hover {
   color: black;
+  transition: color 1s;
 }
 
-#main-hero {
-  position: relative;
-  width: 100%;
-  height: 60vh;
+#phone-number {
+  right: 0;
+  color: #e22424;
 }
 
 #video-container {
@@ -100,7 +101,7 @@ header #site-logo {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   min-height: 100%;
   width: 100%;
   justify-items: center;
@@ -110,27 +111,24 @@ header #site-logo {
 }
 
 .container #quick-menu {
-  grid-column: 1/-1;
-  justify-content: center;
-}
-
-.container #quick-menu #quick-menu-img {
-  padding: 20px;
+  justify-self: center;
+  background-color: #e48458;
+  grid-column: 1/3;
+  margin-top: 50px;
+  width: 50vw;
+  padding: 10px;
   text-align: center;
 }
 
-.container #quick-menu-img img {
-  border-radius: 40%;
-  border: 2px solid #da7d7d;
-  height: 20vh;
-  padding: 10px;
-  margin: 15px;
+.container #quick-menu .quick-menu-items a {
+  display: block;
+  text-decoration: none;
 }
 
 .container #main-aboutUs, .container #featured-items {
   padding: 15px;
   text-align: center;
-  grid-column: 1/3;
+  grid-column: 1/-1;
 }
 
 .container #main-map-location {
@@ -149,9 +147,10 @@ header #site-logo {
   overflow: hidden;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
 }
 
-.about-container #our-story, .about-container #fresh-ingredients {
+.about-container #our-story, .about-container #fresh-ingredients, .about-container #family-owned {
   grid-column: 1/-1;
   padding: 30px;
   text-align: center;
@@ -160,10 +159,7 @@ header #site-logo {
 
 .about-container #our-story {
   border: 3px solid #da7d7d;
-}
-
-.about-container #family-owned {
-  background-color: #e48458;
+  grid-column: 1/-1;
 }
 
 .about-container #fam-photo {
@@ -171,18 +167,20 @@ header #site-logo {
   height: 200px;
   object-fit: contain;
   align-self: center;
+  grid-column: 1/-1;
 }
 
-.about-container #fresh-ingredients {
+.about-container #fresh-ingredients, .about-container #family-owned {
   background-color: #e48458;
 }
 
 .about-container .ingredients img {
-  width: 100%;
+  max-width: 80%;
   height: auto;
   border: 2px solid black;
   padding: 5px;
   border-radius: 10px;
+  object-fit: co;
 }
 
 .menu-img-display {
@@ -301,15 +299,23 @@ footer div i {
     display: inline;
     background-color: transparent;
     top: 0;
+    grid-column: 2/7;
+    margin-left: 40vw;
   }
   .nav-menu a {
     display: inline-block;
     color: #e22424;
     font-size: 1.3rem;
     vertical-align: center;
+    text-transform: uppercase;
+  }
+  .nav-menu a:hover {
+    color: white;
+    text-decoration: underline;
+    transition: color 1s;
   }
   #site-logo {
-    font-size: 4.5rem;
+    font-size: 4.7rem;
     vertical-align: middle;
   }
 }
@@ -342,14 +348,8 @@ footer div i {
 }
 
 @media only screen and (min-width: 800px) {
-  .about-container #family-owned {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    font-size: 1.4rem;
-  }
-  .about-container #fam-photo {
-    grid-column: 1/2;
-    grid-row: 2/3;
+  .about-container {
+    width: 80vw;
   }
   .menu-img-display {
     width: 80vw;

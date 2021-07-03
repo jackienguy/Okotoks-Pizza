@@ -6,15 +6,23 @@
     display: inline;
     background-color: transparent;
     top: 0;
+    grid-column: 2/7;
+    margin-left: 40vw;
   }
   .nav-menu a {
     display: inline-block;
     color: #e22424;
     font-size: 1.3rem;
     vertical-align: center;
+    text-transform: uppercase;
+  }
+  .nav-menu a:hover {
+    color: white;
+    text-decoration: underline;
+    transition: color 1s;
   }
   #site-logo {
-    font-size: 4.5rem;
+    font-size: 4.7rem;
     vertical-align: middle;
   }
 }

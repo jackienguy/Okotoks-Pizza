@@ -5,10 +5,11 @@ $header-height: 11vh;
 $hd-link-color: red;
 $hd-link-font-size: 1.1em;
 $hd-link-pad: 7px;
-$site-logo-width: 4.3rem;
+$site-logo-width: 90px;
 $website-font-fam:'Poppins', sans-serif;
 $nav-bkg-color: black;
 $link-color: rgb(226, 36, 36);
+$text-block-bkg-color: rgb(228, 132, 88);
 
 header {
     background-color: $nav-bkg-color;
@@ -24,7 +25,7 @@ header {
     z-index: 1;
 }
 
-header #site-logo {
+#site-logo {
     width: $site-logo-width;
     grid-column: 1/2;
     top: 0;

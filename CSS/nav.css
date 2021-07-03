@@ -37,5 +37,6 @@
 
 .nav-menu a:hover {
   color: black;
+  transition: color 1s;
 }
 /*# sourceMappingURL=nav.css.map */

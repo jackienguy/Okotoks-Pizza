@@ -10,6 +10,7 @@ body, html {
     height: 100vh;
     font-family: $website-font-fam;
     background: #f2e9e4;
+    overflow-x: hidden;
 }
 
 // navbar style
@@ -17,14 +18,12 @@ body, html {
 
 @import 'nav.scss';
 
-// Home Page Style
+#phone-number {
+    right: 0;
+    color: $link-color;
+}
 
 // Main page hero section
-#main-hero {
-        position: relative;
-        width: 100%;
-        height: 60vh;
-    }
 
     #video-container {
         position: absolute;
@@ -46,7 +45,7 @@ body, html {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     min-height: 100%;
     width: 100%;
     justify-items: center;
@@ -55,27 +54,37 @@ body, html {
     overflow: auto;
 
     #quick-menu {
-        grid-column: 1/-1;
-        justify-content: center;
-
-        #quick-menu-img {
-            padding: 20px;
-            text-align: center;
-        }
-    }
-
-    #quick-menu-img img  {
-        border-radius: 40%;
-        border: 2px solid rgb(218, 125, 125);
-        height: 20vh;
+        justify-self: center;
+        background-color: $text-block-bkg-color;
+        grid-column: 1/3;
+        margin-top: 50px;
+        width: 50vw;
         padding: 10px;
-        margin: 15px
+        text-align: center;
     }
+
+    #quick-menu .quick-menu-items a {
+        display: block;
+        text-decoration: none;
+    }
+
+    // #quick-menu {
+
+    //     justify-content: center;
+    // }
+
+    // #quick-menu #quick-menu-img img  {
+    //     border-radius: 40%;
+    //     border: 2px solid rgb(218, 125, 125);
+    //     height: 15vh;
+    //     padding: 10px;
+    //     margin: 15px
+    // }
 
     #main-aboutUs, #featured-items {
         padding: 15px;
         text-align: center;
-        grid-column: 1/3;
+        grid-column: 1/-1;
     }
 
     #main-map-location {
@@ -95,9 +104,10 @@ body, html {
     overflow: hidden;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
 
 
-    #our-story, #fresh-ingredients {
+    #our-story, #fresh-ingredients, #family-owned  {
         grid-column: 1/-1;
         padding: 30px;
         text-align: center;
@@ -107,32 +117,28 @@ body, html {
 
     #our-story {
         border: 3px solid rgb(218, 125, 125);
-    }
-
-    #family-owned {
-        // grid-column:1/4 ;
-        background-color: rgb(228, 132, 88);
+        grid-column: 1/-1;
     }
 
     #fam-photo {
         max-width: 100%;
         height: 200px;
         object-fit: contain;
-        // grid-column: 1/ span 1;
         align-self: center;
+        grid-column: 1/-1;
     }
 
-    #fresh-ingredients {
-        background-color: rgb(228, 132, 88);
+    #fresh-ingredients, #family-owned  {
+        background-color: $text-block-bkg-color;
     }
     
     .ingredients img {
-        width: 100%;
+        max-width: 80% ;
         height: auto;
-        // grid-column: 1/2;
         border: 2px solid black;
         padding: 5px;
         border-radius: 10px;
+        object-fit: co;
     }
 }
 
@@ -309,16 +315,7 @@ footer {
 // About Us Desktop Style 
 
     .about-container {
-        #family-owned {
-            grid-column: 2/3;
-            grid-row: 2/3;
-            font-size: 1.4rem;  
-        }
-
-        #fam-photo {
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
+        width: 80vw;
     }
 
  // Menu Page Desktop Style

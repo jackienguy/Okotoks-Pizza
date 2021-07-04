@@ -30,14 +30,13 @@ body, html {
     position: fixed;
     text-align: center;
     z-index: 1;
+    border-radius: 10px;
 }
 
 #phone-number:hover {
     color: white;
     transition: color 1s;
 }
-
-
 
 // ----- Main Page -----
 
@@ -96,7 +95,7 @@ body, html {
         background-color: $text-block-bkg-color;
         grid-column: 1/-1;
         margin: 50px;
-        width: 80vw;
+        width: 60vw;
         padding: 10px;
         text-align: center;
     }
@@ -170,7 +169,7 @@ body, html {
     #main-map-location {
         grid-column: 1/-1;
         margin-top: 100px;
-        width: 90vw;
+        width: 80vw;
         margin: 0 auto;
 
         #main-map {
@@ -180,7 +179,7 @@ body, html {
                 align-self: center;
                 background-color: $text-block-bkg-color;
                 height: 15vh;
-                width: 90vw;
+                width: 80vw;
                 padding-top: 30px;
             }
 
@@ -222,13 +221,17 @@ body, html {
         width: 75vw;
     }
 
-    
     #fresh-ingredients, #family-owned  {
         background-color: $text-block-bkg-color;
     }
 
+    #family-owned {
+        width: 80vw;
+    }
+
     #family-owned iframe {
         padding: 30px;
+        width: 100%;
     }
     
     .ingredients img {
@@ -276,7 +279,6 @@ body, html {
         }
     }
 }
-
 
 
 // - Menu Section -
@@ -449,19 +451,108 @@ footer {
     }
 }
 
-// Media Query - Desktop 
-@media only screen and (min-width: 800px) {
-//    Nav-bar desktop style
 
-
-// About Us Desktop Style 
-
-    .about-container {
-        width: 80vw;
+// ---TABLET VIEW---
+@media only screen and (min-width: 600px) {
+    // ----- Navbar Tablet ----- 
+    #toggle-btn {
+        display: none;
     }
 
- // Menu Page Desktop Style
-    .menu-img-display {
-        width: 80vw;
+    .nav-menu {
+        display: inline;
+        background-color: transparent;
+        top: 0;
+        grid-column: 2/7;
+        margin-left: 40vw;
     }
+
+    .nav-menu a {
+        display: inline-block;
+        color: $link-color;
+        font-size: 1.1rem;
+        vertical-align: center;
+       text-transform: uppercase;  
+    }
+
+    .nav-menu a:hover {
+        color: $text-hover;
+        text-decoration: underline;
+        transition: color 1s;
+    }
+
+    #site-logo {
+        font-size: 90px;
+        vertical-align: middle;
+    }
+
+    // -----Phone Number Tablet 
+    #phone-number {
+        pointer-events: none;
+        // to disable clickable call on tablet view
+    }
+
+    // - Menu Section -
+    .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
+        height: 50vh;
+    }  
+}
+
+@media only screen and (min-width: 900px) {
+    
+    // ----- Navbar Desktop -----
+    .nav-menu {
+        display: inline;
+        background-color: transparent;
+        top: 0;
+        grid-column: 2/7;
+        margin-left: 50vw;
+    }
+    
+    .nav-menu a {
+        font-size: 1.3rem;  
+    }
+    
+    #site-logo {
+        font-size: 100px;
+    }
+
+    #quick-menu .quick-menu-items a {
+        display: inline-block;
+        font-size: 1.4rem;
+    }
+
+    #fresh-ingredients, #family-owned  {
+        font-size: 1.2rem;
+    }
+
+    //  ----- Phone Number Desktop ----- 
+    #phone-number {
+        pointer-events: none;
+          // to disable clickable call on tablet view
+    }
+
+    //  ---- Main Section Desktop -----
+    #hero #hero-content {
+        font-size: 1.3rem;
+    }
+    
+    // ----- Menu Section Desktop ------ 
+    .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
+        height: 40vh;
+    } 
+
+    #menu-signature-pizza, #menu-calzones, #menu-pastas, #menu-beverages {
+        font-size: 2rem;
+    }
+
+    // ------ Contact Us Section -----
+    .contactUs-container {
+        #map-location #map iframe {
+            #map iframe {
+                width: 60vw; 
+              }
+        }
+    }
+
 }

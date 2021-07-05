@@ -14,28 +14,7 @@ $border-hover-color: rgb(209, 71, 71);
 $text-hover: white;
 $opacity-bkg-color: rgb(136, 133, 133);
 
-header {
-    background-color: $nav-bkg-color;
-    height: $header-height;
-    top: 0;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: $grid-col-width;
-    justify-items: center;
-    align-items: center;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-}
 
-#site-logo {
-    width: $site-logo-width;
-    grid-column: 1/2;
-    top: 0;
-    position: absolute;
-    padding: 3px;
-    vertical-align: middle;
-    // Position as absolute to take position relateive to nearest position ancestor #nav-bar
-}
+
 
 

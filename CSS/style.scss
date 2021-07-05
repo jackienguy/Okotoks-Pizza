@@ -13,11 +13,84 @@ body, html {
     overflow-x: hidden;
 }
 
-// navbar style
 @import 'header.scss';
 
-@import 'nav.scss';
-    
+//  -----Navbar -----
+
+header {
+    background-color: $nav-bkg-color;
+    height: $header-height;
+    top: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: $grid-col-width;
+    justify-items: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+} 
+
+#site-logo {
+    width: $site-logo-width;
+    grid-column: 1/2;
+    top: 0;
+    position: absolute;
+    padding: 3px;
+    vertical-align: middle;
+    // Position as absolute to take position relateive to nearest position ancestor #nav-bar
+}
+
+// navbar toggle menu
+
+#toggle-btn {
+    position: absolute;
+     // Position as absolute to take position relateive to nearest position ancestor #nav-bar
+    right: 0;
+    top: 0;
+    padding-top: 1.2rem;
+    padding-right: 1.2rem;
+    cursor: pointer;
+    color: $link-color;
+    font-size: 1.5rem; 
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav-menu {
+    display: block;
+}
+
+.nav-menu {
+    display: none;
+    align-content: center;
+    background-color: $opacity-bkg-color;
+    top: 55px;
+    position: relative;
+    width: 100vw;
+    z-index: 1;
+}
+
+.nav-menu a {
+    color: $link-color;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+    margin: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: $link-hover-color;
+    transition: color 1s;
+    font-size: 1.2rem;
+}
+
+// -----Fixed Phone Number on all media view ----- 
 
 #phone-number {
     right: 0;
@@ -34,7 +107,7 @@ body, html {
 }
 
 #phone-number:hover {
-    color: white;
+    color: $link-hover-color;
     transition: color 1s;
 }
 
@@ -42,7 +115,7 @@ body, html {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     height: 69vh;
     width: 100%;
     margin: 30px 0px;
@@ -113,10 +186,10 @@ body, html {
         text-decoration: underline;
     }
 
-    // Featured Items
+    // - Featured Items -
     #featured-items {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         width: 90vw;
         justify-content: center;
         margin: 50px 20px;
@@ -165,7 +238,7 @@ body, html {
         }
 }
 
-    // Visit Us Section
+    // - Visit Us Section - 
     #main-map-location {
         grid-column: 1/-1;
         margin-top: 100px;
@@ -194,7 +267,7 @@ body, html {
     }
 }
 
-// - About Us Section -
+// ----- About Us Section -----
 .about-container  {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -281,7 +354,7 @@ body, html {
 }
 
 
-// - Menu Section -
+// ----- Menu Section -----
 .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
     background-image: url("https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
     background-repeat: no-repeat;
@@ -345,7 +418,7 @@ body, html {
 // ---Contact Us Section ---
 .contactUs-container {
     display: grid;
-    grid-column: repeat(auto-fit, minmax(150px, 1fr));
+    grid-column: repeat(auto-fit, minmax(300px, 1fr));
     width: 90vw;
     min-height: 69vh;
     justify-items: center;
@@ -353,8 +426,13 @@ body, html {
     // flex is used to align items horizonatlly on the main axis. Flex will align all items within the parent container. By using flex-direction: column, it will display the items in a column instead of a row
     // Min-height - there is not enough content to fill the viewport so the footer moves up onto the middle of the webpage. Min-heigh is used to keep footer at the bottom of the page. Calc is used to calculate the min height value. Min height = 100vh - header height - footer height. If the contemt is larget han the min-height, it would not affect the footer positon 
 
+    .contact-location {
+        padding: 15px;
+        background-color: $text-block-bkg-color;
+        text-align: center;
+    }
+
     #contact-us {
-        grid-column: 1/3;
         grid-row: 1/2;
         margin-top: 35px; 
         margin-bottom: 30px;  
@@ -362,20 +440,16 @@ body, html {
 
     #map-location {
         margin-bottom: 30px;
-        grid-row: 2/3 ;
         margin-top: 15px;
     }
 
-    .contact-location {
-        padding: 15px;
-        background-color: $text-block-bkg-color;
-        text-align: center;
-    }
+    .contact-social {
+        color: $contact-icon-color;
+    }        
 } 
 
-// Footer Style 
+// ----- Footer Section ----- 
 footer {
-    // background-color: $nav-bkg-color;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-items: center;
@@ -392,65 +466,15 @@ footer {
     }
 
     #footer-contact a {
-        color: white;
+        color: $contact-icon-color;
     }
 
     #social i {
-        color: white;
+        color: $contact-icon-color;
         padding: 5px;
         font-size: 1.3rem;
     }
 }
-
-
-// Media Query - Tablet
-@media only screen and (min-width: 600px) {
-  @import 'MediaQueryTablet.scss';
-    // Home Page Tablet Style
-    
-    
-    // About Us Tablet Style
-    
-    
-    // Menu Page Tablet Style
-    .menu-img-display {
-        height: 50vh;
-    }
-    
-    // // Contact-Us Tablet Style
-    .contactUs-container {
-        #contact-us #contact-location h2 p {
-            font-size: 0.9rem;
-        }
-        
-        #map-location {
-            grid-row: 1/4;
-            font-size: 1.1rem;
-        }
-    }
-    
-   
-    // Footer Style 
-    footer {
-    // background-color: $nav-bkg-color;
-        display: grid;
-        grid-template-columns: repeat(autofit, minmax(0.5px,1fr));
-        align-items: center;
-
-        div i {
-        color: white;;
-        }
-
-        #hours h3, p {
-            text-align: left;
-        }
-
-        div h3, p, a, i {
-            font-size: 0.9rem;
-        }
-    }
-}
-
 
 // ---TABLET VIEW---
 @media only screen and (min-width: 600px) {
@@ -486,18 +510,24 @@ footer {
         vertical-align: middle;
     }
 
-    // -----Phone Number Tablet 
+    // -----Phone Number Tablet -----
     #phone-number {
         pointer-events: none;
         // to disable clickable call on tablet view
     }
 
-    // - Menu Section -
+    // ----- Menu Section Tablet -----
     .menu-img-display1, .menu-img-display2, .menu-img-display3, .menu-img-display4 {
         height: 50vh;
     }  
+
+    //  ----- Contact Us Section ----- 
+    #map-location {
+        grid-row: 1/4;
+    }
 }
 
+// ---DESKTOP VIEW ---
 @media only screen and (min-width: 900px) {
     
     // ----- Navbar Desktop -----
